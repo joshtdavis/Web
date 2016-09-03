@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="webPersonStyle.css">
+<title id="title"></title>
+<script type="text/javascript" src="Cookie.js">
+</script>
+
+<script type="text/javascript">
+window.onload=function(){
+	if(Cookie.exists("username")){
+		document.getElementById("usernamePlace").innerHTML = Cookie.get("username");
+	}
+	highlightPersonalPage();
+	function highlightPersonalPage(){
+		var aTag;
+		var location = window.location.pathname.substring(window.location.pathname.lastIndexOf("/")+1);
+			if(location=="personalPage.html"){
+				aTag = document.getElementById("personAnchor");
+				aTag.style.color = "#00ff00" ;
+			}
+			else{
+				if(location=="security.html"){
+					aTag = document.getElementById("securityAnchor");
+					aTag.style.color = "#00ff00" ;
+				}
+			}
+	}
+};
+</script>
+
+<div class="top">
+<h2>Hello<br> <span id="usernamePlace"></span> </h2>
+</div>
+<div>
+<nav class="bar"><ul>
+<li><a href="personalPage.html" id="personAnchor">Personal Page</a></li>
+<li><a href="security.html" id="securityAnchor">Security</a></li>
+</ul></nav>
+</div>
+</head>
+<body>
+<form id="personForm" name="personalPrefrences">
+<fieldset class="field" >
+<h2>Choose Preferences</h2>
+<label for="webAddr">Web Address</label>
+<input type="url" name="webAddr" id="webAddr"/>
+<label for="template">Template</label>
+	<select name="template" id="template">
+	<option value="t1">eCommerce</option>
+	<option value="t2">Personal Biography</option>
+	<option value="t3">Adsense</option>
+	<option value="t4">Information Library</option>
+	<option value="t5">Lead Generation</option>
+	<option value="t6">Glue</option>
+	<option value="t7">Boiler Plate</option>
+	<option value="t8">Custom</option>
+	</select>
+</fieldset>
+<fieldset class="field">
+<h2>When you are finshed adjusting your settings click the done button</h2>
+<input type="submit" value="Done" id="prefButton"/>
+</fieldset>
+</form>
+</body>
+</html>

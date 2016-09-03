@@ -1,0 +1,17 @@
+#info{
+margin: 0 auto 2% auto;
+}
+#liab{
+float: right;
+}
+#Expenses{
+float: left;
+}
+#stocks{
+float: left;
+clear: both;
+}
+#stockArea{
+	float:left;
+	clear: both;
+}

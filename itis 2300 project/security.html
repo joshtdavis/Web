@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="webPersonStyle.css">
+<title id="title"></title>
+<script type="text/javascript" src="Cookie.js">
+</script>
+
+<script type="text/javascript">
+window.onload=function(){
+	if(Cookie.exists("username")){
+		document.getElementById("usernamePlace").innerHTML = Cookie.get("username");
+	}
+	highlightPersonalPage();
+	function highlightPersonalPage(){
+		var aTag;
+		var location = window.location.pathname.substring(window.location.pathname.lastIndexOf("/")+1);
+			if(location=="personalPage.html"){
+				aTag = document.getElementById("personAnchor");
+				aTag.style.color = "#00ff00" ;
+			}
+			else{
+				if(location=="security.html"){
+					aTag = document.getElementById("securityAnchor");
+					aTag.style.color = "#00ff00" ;
+				}
+			}
+	}
+};
+function getSSLChoice(){
+document.getElementById("OtherSSLBox").value = "";
+document.getElementById("OtherSSLBox").type = "text";
+}
+</script>
+
+<div class="top">
+<h2>Hello<br> <span id="usernamePlace"></span> </h2>
+</div>
+<div>
+<nav class="bar"><ul>
+<li><a href="personalPage.html" id="personAnchor">Personal Page</a></li>
+<li><a href="security.html" id="securityAnchor">Security</a></li>
+</ul></nav>
+</div>
+</head>
+<body>
+<form id="secForm" name="chooseEncrypt">
+<fieldset class="field">
+<h2>Chose Encryption</h2>
+<label for="encrypt">Encryption</label>
+	<select name="encrypt" id="encrypt">
+	<option value="AES">AES</option>
+	<option value="asymmetric">Asymmetric</option>
+	<option value="symmetric">Symmetric</option>
+	<option value="oneTimeNotepad">One time Notepads</option>
+	<option value="Caesar">Caesar Cipher</option>
+	<option value="publicKey">Public-Key</option>
+	<option value="hash">Hashing</option>
+	<option value="none">None</option>
+	</select>
+</fieldset>
+
+<fieldset class="field">
+	<h2>Choose Firewall</h2>
+	<label for="fireWall">Firewall</label>
+		<select name="fireWall" id="fireWall">
+		<option value="packFilt">Packet Filtering</option>
+		<option value="circuitGate">Circuit level Gateway</option>
+		<option value="appGate">Application level Gateway</option>
+		<option value="statMultiInspec">Stateful Multilayer Inspection</option>
+		<option value="none">None</option>
+		</select>
+</fieldset>
+
+<fieldset class="field2">
+<h2>Choose if you want SSL Certificate</h2>
+<input type="radio" id="OpenSSLBox" name="OpenSSL" value="OpenSSLCheck"/>
+<label for="ssl" >OpenSSL</label>
+<input type="radio" id="SymantecSSLBox" name="SymantecSSL" value="SymantecSSLCheck"/>
+<label for="ssl" >Symantec SSL</label>
+<input type="radio" id="ComodoSSLBox" name="ComodoSSL" value="ComodoSSLCheck"/>
+<label for="ssl" >Comodo SSL</label>
+<input type="radio" id="OtherSSLBox" name="OtherSSL" onclick="getSSLChoice()" value="OtherSSLCheck"/>
+<label for="ssl" >Other</label>
+<input type="radio" id="NoSSLBox" name="NoSSL" value="NoSSLCheck"/>
+<label for="ssl" >none</label>
+</fieldset>
+
+<fieldset class="field">
+<h2>When you are finshed adjusting your settings click the done button</h2>
+<input type="submit" value="Done" id="securityButton"/>
+</fieldset>
+</form>
+</body>
+</html>

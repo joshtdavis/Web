@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="webStyle.css">
+<title>MacroVision</title>
+<script type="text/javascript" src="Cookie.js">
+</script>
+<script type="text/javascript" src="webPro.js">
+
+</script>
+<div class="top">
+<img src="webLook.jpg" alt="picture not found" id="topImg1"/>
+<img src="macroVisionIcon.jpg"alt="picture not found" id="companyIcon"/>
+<h2>Macro Vision Inc. <br> Bringing a Bright Tomorrow, Today!</h2>
+</div>
+<div>
+<nav class="bar"><ul>
+<li><a href="home.html" id="homeAnchor">Home</a></li>
+<li><a href="signup.html" id="signAnchor">Sign Up</a></li>
+<li><a href="gallery.html" id="galAnchor">Video Gallery</a></li>
+<li><a href="templates.html" id="tempAnchor">Templates</a></li>
+<li><a href="Aboutus.html" id="aboutAnchor">About Us</a></li>
+</ul></nav>
+</div>
+</head>
+<body>
+<div>
+<h2>Sign Up!</h2>
+<p class="paragraph" id="signPara">In order to use our esteemed service some information is required first.  Please look carefully before you answer.  If your input is not in the right format errors will
+pop up to tell you what went wrong.
+</p>
+<form class="formS" id="signForm" name="signUp" onsubmit="checkAll()">
+
+<fieldset class="field">
+	<h2>Personal Information</h2>
+	<label for="fname"> First Name:</label>
+	<input type="text" name="fname" id="fname" size="20" placeholder="enter your first name" title = "Place first name here" required>
+	<label for="lname"> Last Name:</label>
+	<input type="text" name="lname" id="lname" size="20" placeholder="enter your last name" title="Place Second name here" required>
+	<label for="adr"> Address:</label>
+	<input type="text" name="adr" id="adr" size="100" placeholder="enter your address" title="example format is 2345 falling lane" required> <!--pattern="([0-9]d{4})\/([a-z])\/([a-z])"-->
+	<label for="city"> City:</label>
+	<input type="text" name="city" id="city" size="75" placeholder="enter your city" title="Place your city name" required>
+	<label for="state"> State:</label>
+	<select id="state" name="state">
+	<option value="al">Alabama </option>
+	<option value="ak">Alaska </option>
+	<option value="az">Arizona </option>
+	<option value="ca">California </option>
+	<option value="co">Colorado </option>
+	<option value="ct">Connecticut </option>
+	<option value="de">Delaware </option>
+	<option value="fl">Florida </option>
+	<option value="ga">Georgia </option>
+	<option value="hi">Hawaii </option>
+	<option value="id">Idaho </option>
+	<option value="il">Illinois </option>
+	<option value="in">Indiana </option>
+	<option value="ia">Iowa </option>
+	<option value="ks">Kansas </option>
+	<option value="ky">Kentucky </option>
+	<option value="la">Louisiana </option>
+	<option value="me">Maine </option>
+	<option value="md">Maryland </option>
+	<option value="ma">Massachusetts </option>
+	<option value="mi">Michigan </option>
+	<option value="mn">Minnesota </option>
+	<option value="ms">Mississippi </option>
+	<option value="mo">Missouri </option>
+	<option value="mt">Montana </option>
+	<option value="ne">Nebraska </option>
+	<option value="nv">Nevada </option>
+	<option value="nh">New Hampshire </option>
+	<option value="nj">New Jersey </option>
+	<option value="nm">New Mexico </option>
+	<option value="ny">New York </option>
+	<option value="nc">North Carolina </option>
+	<option value="nd">North Dakota </option>
+	<option value="oh">Ohio </option>
+	<option value="ok">Oklahoma </option>
+	<option value="or">Oregon </option>
+	<option value="pa">Pennsylvania </option>
+	<option value="ri">Rhode Island </option>
+	<option value="sc">South Carolina </option>
+	<option value="sd">South Dakota </option>
+	<option value="tn">Tennessee </option>
+	<option value="tx">Texas </option>
+	<option value="ut">Utah </option>
+	<option value="vt">Vermont </option>
+	<option value="va">Virginia </option>
+	<option value="wa">Washington </option>
+	<option value="wv">West Virginia </option>
+	<option value="wi">Wisconsin </option>
+	<option value="wy">Wyoming </option>
+	<option value="as">American Soma </option>
+	<option value="dc">District of Columbia </option>
+	<option value="gu">Guam </option>
+	<option value="mp">Northern Mariana Islands </option>
+	<option value="pr">Puerto Rico </option>
+	<option value="vi">Virgin Islands </option>
+	<option value="ot">Other </option>
+	</select>
+	<label for="country"> Country:</label>
+	<select id="country" name="country">
+	<option value="us">United States </option>
+	<option value="ch">China </option>
+	<option value="ja">Japan </option>
+	<option value="ge">Germany </option>
+	<option value="fr">France </option>
+	<option value="uk">United Kingdom </option>
+	<option value="br">Brazil </option>
+	<option value="ru">Russia </option>
+	<option value="it">Italy </option>
+	<option value="in">India </option>
+	<option value="ca">Canada </option>
+	<option value="au">Australia </option>
+	<option value="sp">Spain </option>
+	<option value="me">Mexico </option>
+	<option value="sk">South Korea </option>
+	<option value="in">Indonesia </option>
+	<option value="tr">Turkey </option>
+	<option value="nt">Netherlands </option>
+	<option value="sa">Saudi Arabia </option>
+	<option value="sw">Switzerland </option>
+	<option value="nr">Norway </option>
+	<option value="po">Poland </option>
+	<option value="be">Belgium </option>
+	<option value="ar">Argentina </option>
+	<option value="as">Austria </option>
+	<option value="th">Thailand </option>
+	<option value="sf">South Africa </option>
+	<option value="ue">United Arab Emirates </option>
+	<option value="is">Israel </option>
+	<option value="ot">Other </option>
+	</select>
+	<label for="age"> Age:</label>
+	<input type="number" id="age" step="1" min="1" max="250" value="1" required>
+	<label for="birth"> BirthDate: </label>
+	<input type="text" id="birth" placeholder="MM/DD/YYYY" title="The date should be in the format MM/DD/YYYY with leading zeros where necessary" required>
+	<label for="bcrdNum"> Bank debit/credit Card:</label>
+	<input type="text" name="bcrdNum" id="bcrdNum" size="100" placeholder="Debit Card Number" title="The Card Number has exactly 16 digits" required>
+	<label for="SSN"> Social Security Number:</label>
+	<input type="text" name="SSN" id="SSN" size="100" placeholder="enter your social security number" title="The SSN has exactly 9 digits" required>
+	</fieldset>
+	
+	<fieldset class="field">
+	<h2>Contact Information</h2>
+	<label for="email"> E-mail:</label>
+	<input type="email" name="email" id="email" title="must follow the form of name@site.com can use .net or .edu instead of .com" required>
+	<label for="phone"> Phone: </label>
+	<input type="tel" name="phone" id="phone" required>
+	</fieldset>
+	<fieldset class="field2">
+	<h2>Preferred method of Contact</h2>
+	<input type="checkbox" id="emailc" name="Contact" value="email"/>
+	<label for="contact">E-mail</label>
+	<input type="checkbox" id="phonec" name="Contact" value="phone"/>
+	<label for="contact">Phone</label>
+	</fieldset>
+	
+	<fieldset class="field">
+	<h2>Account Information</h2>
+	<label for="userName" >UserName</label>
+	<input type="text" name="userName" id="userName" size="25" placeholder="Set account user name" title="user names must be at least 8 characters long">
+	<label for="Password">Password: </label>
+	<input type="text" name="Password" id="Password" size="30" placeholder="Set password for account" title="passwords must be at least 8 characters long">
+	</fieldset>
+	
+	<fieldset class="field" title="submit">
+	<input type="submit" id="button" value="Done" onclick="checkAll()"/>
+	</fieldset>
+</form>
+</div>
+</body>
+<footer class="footer">
+</footer>
+</body>
+</html>

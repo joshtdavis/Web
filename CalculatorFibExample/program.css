@@ -1,0 +1,36 @@
+.calc{
+	float: left;
+	border: 2px solid black;
+}
+.Fib{
+	float: right;
+}
+#fibSubmit{
+	cursor: pointer;
+}
+#screen,#history{
+
+}
+.button{
+	font-size: 16px;
+	background-color: white;
+    color: black;
+	cursor: pointer;
+	border-radius: 15px;
+	box-shadow: 0 3px #999;
+	padding: 15px 25px;
+}
+
+#addSign{
+	padding-bottom: 30px;
+}
+
+.button:hover {
+	background-color: #808080;
+}
+
+.button:active {
+  background-color: #696969;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

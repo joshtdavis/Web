@@ -1,0 +1,63 @@
+.bar{
+background-color: #0099ff;
+height: 40px;
+width: 100%;
+margin: 20px 0;
+}
+
+.bar ul{
+list-style: none;
+margin: 0px;
+padding: 0px;
+text-align: center;
+width: 100%;
+}
+.bar ul li{
+display: inline;
+float: left;
+width: 20%;
+}
+.bar ul li a {
+text-decoration: none;
+padding: .2em .1em;
+display: block;
+width: 100%;
+}
+a:link, a:visited{
+height: 35px;
+color: black;
+}
+a:hover, a:active{
+background-color: #33ffff;
+}
+.field label {
+	width: 110px;
+	float: left;
+	clear: left;
+}
+.field textarea {
+	width: 550px;
+	height: 175px;
+}
+.field {
+	width:900px; 
+	background-color: #c8c8c8;
+	margin: 6px auto 7px auto;
+	border: 6px;
+}
+.field input, .field select {
+margin: 3px auto 5px auto;
+width: 200px;
+float: left;
+}
+h2{
+text-align: center;
+}
+.field2{
+background-color: #c8c8c8;
+margin: 7px auto 6px auto;
+width: 900px;
+}
+.field2 label{
+clear: left;
+}

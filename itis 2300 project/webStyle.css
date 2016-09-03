@@ -1,0 +1,243 @@
+.bar{
+background-color: #0099ff;
+height: 40px;
+width: 100%;
+margin: 20px 0;
+}
+
+.bar ul{
+list-style: none;
+margin: 0px;
+padding: 0px;
+text-align: center;
+width: 100%;
+}
+.bar ul li{
+display: inline;
+float: left;
+width: 20%;
+}
+.bar ul li a {
+text-decoration: none;
+padding: .2em .1em;
+display: block;
+width: 100%;
+}
+.midblock{
+background-color: #d0d0d0;
+height: auto;
+width: 790px;
+margin-right: auto;
+margin-left: auto;
+margin-bottom: 5%;
+border: 5px solid;
+border-color: #d0d0d0;
+border-radius: 20px;
+}
+a:link, a:visited{
+height: 35px;
+color: black;
+}
+a:hover, a:active{
+background-color: #33ffff;
+}
+#columnTwo{
+float:right;
+border-top: 1px solid black;
+margin-right: 4%;
+}
+#columnOne{
+float: left;
+border-top: 1px solid black;
+margin-left: 4%;
+}
+#imageOne{
+float: left;
+}
+#imageTwo{
+float: right;
+}
+#imageThree{
+float: left;
+}
+#imageFour{
+float: right;
+}
+#topImg1{
+float: left;
+}
+#companyIcon{
+float: right;
+}
+#temp1{
+min-height: 10em;
+display: table-cell;
+vertical-align: middle;
+margin-right: 0px;
+}
+#temp2{
+min-height: 105em;
+display: table-cell;
+vertical-align: middle;
+margin: 0 auto;
+}
+#templIm{
+display:  block;
+margin: 0 auto;
+}
+#vidGal{
+display:  block;
+margin: 0 auto;
+}
+#backb{
+float: left;
+margin-bottom: 20%;
+}
+#nextb{
+float: right;
+margin-bottom: 20%;
+}
+#backVb{
+float: left;
+margin-bottom: 20%;
+}
+#nextVb{
+float: right;
+margin-bottom: 20%;
+}
+.column{
+height: auto;
+width: 40%; 
+background-color: #d0d0d0;
+margin-top: 10%;
+margin-bottom: 25%;
+border: 5px solid;
+border-color: #d0d0d0;
+border-radius: 20px;
+}
+.abu{
+height: auto;
+background-color: #c0c0c0;
+width: 80%;
+margin: auto auto 25% auto;
+}
+.paragraph{
+text-align: center;
+font-family: arial, verdana, sans-serif;
+font-size: large;
+}
+.gall{
+position: relative;
+width: 100%;
+margin-bottom: 0px;
+}
+.field2{
+background-color: #c8c8c8;
+margin: 6px auto 6px auto;
+width: 900px;
+}
+#button{
+border-left: 4px solid #999;
+border-top: 4px solid #999;
+border-right: 4px solid #000;
+border-bottom: 4px solid #000;
+background-color: #000;
+color: White;
+}
+
+.field2 label{
+clear: left;
+}
+
+.field label {
+	width: 110px;
+	float: left;
+	clear: left;
+}
+.field textarea {
+	width: 550px;
+	height: 175px;
+}
+.field {
+	width:900px; 
+	background-color: #c8c8c8;
+	margin: 6px auto 6px auto;
+	border: 6px;
+}
+.field input, .field select {
+margin: 3px auto 5px auto;
+width: 200px;
+float: left;
+}
+.formT{
+height: 20px;
+margin: 4% 5% 5% 2%;
+}
+.template{
+border: 2px solid black;
+}
+.footer{
+height: 30px;
+width: 100%;
+background-color: #d8d8d8;
+clear: both;
+margin-bottom: 0;
+margin-top: 30px;
+}
+.top{
+height: 220px;
+width: 100%;
+margin: 5% auto auto 0%;
+display: block;
+}
+h2, #text{
+text-align: center;
+}
+#signPara{
+width: 900px;
+margin: 2% auto 2% auto;
+}
+#speechBox1{
+float:  left;
+visibility: hidden;
+overflow: hiddden;
+}
+#speechBox2{
+float:   right;
+visibility: hidden;
+overflow: hidden;
+}
+#speechBox3{
+float:  left;
+visibility: hidden;
+overflow: hiddden;
+}
+#speechBox4{
+float:   right;
+visibility: hidden;
+overflow: hidden;
+}
+.signIn{
+margin: 2% auto 4% auto;
+display: inline;
+width: 600px;
+height: 500px;
+clear: left;
+float: center;
+}
+.signIn label{
+float: left;
+width: 200px;
+clear: left;
+}
+.signIn input{
+float: left;
+clear: left;
+}
+.signInField{
+	width:900px; 
+	margin: 6px auto 6px auto;
+	border: 10px solid;
+	border-color: #00ff66;
+	border-radius: 30px;
+}

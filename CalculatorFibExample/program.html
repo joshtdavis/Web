@@ -1,0 +1,45 @@
+<html>
+<meta charset="UTF-8"  name="Josh Davis" content="Program">
+<head>
+<link rel="stylesheet" type="text/css" href="program.css">
+<script type="text/javascript" src="program.js">
+</script>
+</head>
+
+<body>
+<div class = "calc">
+<form >
+History: <label id="history"></label> <br/>
+Screen: <label id="screen"></label></br>
+<table id="numPad">
+<tr id="calrowOne">
+	<td> <button id = "7" class="button" onclick="inputNumber(7); return false;">7</button> </td> <td> <button id = "8" class="button" onclick="inputNumber(8); return false;">8</button> </td> <td> <button id = "9" class="button" onclick="inputNumber(9); return false;">9</button> </td> <td> <button id = "divSign" class="button" onclick="inputOperation('/'); return false;">/</button> </td>
+</tr>
+
+<tr id = "calRowTwo">
+	<td> <button id = "4" class="button" onclick="inputNumber(4); return false;">4</button> </td> <td> <button id = "5" class="button" onclick="inputNumber(5); return false;">5</button> </td> <td> <button id = "6" class="button" onclick="inputNumber(6); return false;">6</button> </td> <td> <button id = "multSign" class="button" onclick="inputOperation('*'); return false;">*</button></td>
+</tr>
+
+<tr id = "calRowThree">
+	<td> <button id = "1" class="button" onclick="inputNumber(1); return false;">1</button> </td> <td> <button id = "2" class="button" onclick="inputNumber(2); return false;">2</button> </td> <td> <button id = "3" class="button" onclick="inputNumber(3); return false;">3</button> </td> <td> <button id = "subtractSign" class="button" onclick="inputOperation('-'); return false;">-</button></td>
+</tr>
+
+<tr>
+	<td></td><td> <button id="0" class="button" onclick="inputNumber(0); return false;">0</button> </td> <td> <button id = "." class="button" onclick="inputNumber('.'); return false;">.</button> </td> <td> <button id = "addSign" class="button" onclick="inputOperation('+');return false;">+</button> </td>
+</tr>	
+
+</table>
+<input type="submit" id="Enter" class="button" value="Enter" onclick="performCalc(); return false;"/> <button id="clear" class="button" onclick="clearScreen();return false;">Clear</button>
+</form >
+</div>
+
+<div class = "Fib">
+<form>
+<input type="number" id="fibTerminput"/>
+<input type="submit" id="fibSubmit" value="Calulate" onclick="fib(); return false;"/>
+</form>
+<p>The <label id = "fibTerm"> </label> term of the Fibonacci sequence is <label id="Answer"> </label></p>
+</div>
+</body>
+
+</html>

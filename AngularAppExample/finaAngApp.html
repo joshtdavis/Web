@@ -1,0 +1,117 @@
+<html ng-app="finaApp">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<head>
+<link rel="stylesheet" href="mainFina.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script>
+var app = angular.module('finaApp',[]);
+</script>
+<script type="text/javascript" src="mainFina.js"></script>
+</head>
+
+<body>
+<div id ="inputForm">
+<form onsubmit="getInput()">
+<label id="job">What is your Job Title? </label><input type="text" id="inputJob" value=""/> </br>
+<label id="job">What is your Salary Amount per year? </label><input type="number" id="inputSal" value=""/></br>
+<label id="job">What is your Approximate Tax rate (as a percent)? </label><input type="number" id="inputTax" value=""/></br>
+<label id="job">If you have a Home mortgage, what is the loan's toal value, length (in years), and current rate? If no put 0: </label> <label>Amount: </label><input type="number" id="inputHomeMort" value=""/><label>Length: </label><input type="number" id="inputHomeMortLen" value=""/><label>Rate: </label><input type="number" step=".01" id="inputHomeMortRate" value=""/></br>
+<label id="job">If you have a Car mortgage, what is the loan's total value, length (in years), and current rate? If no put 0: </label><label>Amount: </label><input type="number" id="inputCarLoan" value=""/><label>Length: </label><input type="number" id="inputcarLoanLen" value=""/><label>Rate: </label><input type="number" step=".01" id="inputcarLoanRate" value=""/></br>
+<label id="job">If you have a Education loan, what is the loan's total value, length (in years), and current rate? If no put 0: </label><label>Amount: </label><input type="number" id="inputSchoolLoan" value=""/><label>Length: </label><input type="number" id="inputSchoolLen" value=""/><label>Rate: </label><input type="number" step=".01" id="inputSchoolRate" value=""/></br>
+<label id="job">If you have Credit card dedt, what is the total value and rate? If no put 0: </label><label>Amount: </label><input type="number" id="inputCreditdedt" value=""/><label>Rate: </label><input type="number" id="inputCreditRate" value=""/></br>
+<label id="job">What is the amout your spend on food per month? </label><input type="number" id="inputFood" value=""/></br>
+<input type="submit" value = "Submit"></input>
+</form>
+</div>
+<table id="info" ng-controller="infoCtrl">
+<tr>
+	<td>Job</td>
+	<td>{{ getJob() }}</td>
+</tr>
+
+<tr>
+	<td>Salary</td>
+	<td>{{ getSal() }}</td>
+</tr>
+
+<tr>
+	<td>Passive Income</td>
+	<td>{{ getPasvInc() }}</td>
+</tr>
+</table>
+<div id="ExpenseArea">
+<table id="Expenses" ng-controller="expenCtrl">
+<tr>
+	<td>Taxes</td>
+	<td>{{ getTaxPayment() }}</td>
+</tr>
+<tr>
+	<td>Home Mortgage</td>
+	<td>{{ getHomeMortPayment() }}</td>
+</tr>
+<tr>
+	<td>Car Loan</td>
+	<td>{{ getCarLoanPayment() }}</td>
+</tr>
+<tr>
+	<td>School Loan</td>
+	<td>{{ getSchoolLoanPayment() }}</td>
+</tr>
+<tr>
+	<td>Credit Card</td>
+	<td>{{ getCreditCardPayment() }}</td>
+</tr>
+<tr>
+	<td>Food</td>
+	<td>{{ getFoodPayment() }}</td>
+</tr>
+<tr>
+	<td>Other</td>
+	<td>{{ getOtherPayment() }}</td>
+</tr>
+</table>
+</div>
+<div id ="stockArea"ng-controller="stockCtrl">
+<form ng-submit="addStock()">
+<label>Stock Name</label> <input type="text" ng-model="name"/>
+<label>Number Shares</label> <input type="number" ng-model="shares"/>
+<label>Stock Price</label> <input type="text" ng-model="price"/>
+<input type="submit" value="Buy"/>
+</form>
+<table id="stocks" >
+<tr>
+	<th>Stock Name</th>
+	<th>Number of Shares</th>
+	<th>Stock Purchase Price</th>
+</tr>
+<tr ng-repeat="stock in stocks">
+	<td>{{ stock.name }}</td>
+	<td>{{ stock.shares }}</td>
+	<td>{{ stock.price }}</td>
+	<td><button ng-click="sellStock(stock.name)" value="Sell">Sell</button></td>
+</tr>
+</table>
+</div>
+<div = id="liabArea">
+<table id="liab" ng-controller="liabCtrl">
+<tr>
+	<td>Home Mortgage</td>
+	<td>{{ getHomeMort() }}</td>
+</tr>
+<tr>
+	<td>Car Loan</td>
+	<td>{{ getCarLoan() }}</td>
+</tr>
+<tr>
+	<td>School Loan</td>
+	<td>{{ getSchoolLoan() }}</td>
+</tr>
+<tr>
+	<td>Credit Card</td>
+	<td>{{ getCreditCard() }}</td>
+</tr>
+</table>
+</div>
+</body>
+
+</html>

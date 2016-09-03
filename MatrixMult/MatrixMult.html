@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript" src="MatrixMult.js">
+</script>
+<meta charset="UTF-8"/>
+</head>
+<body>
+<form>
+<label>First Matrix X size : </label>
+<input type="number" id="AXSize"/>
+<label>First Matrix Y size : </label>
+<input type="number" id="AYSize"/> <br />
+<label>Second Matrix X size : </label>
+<input type="number" id="BXSize"/>
+<label>Second Matrix Y size : </label>
+<input type="number" id="BYSize"/> <br />
+<input type = "button" value="See Matrices" onclick=" ShowMtxXsize(); return false"/> <br/>
+<br/>
+
+<table id = "mtxTable">
+<label>Matrix A</label>
+<div id="MtxA">
+<tr><input type="number" id="Example1"></tr>
+</div>
+<label> X </label><br />
+<label>Matrix B</label>
+<div id = "MtxB">
+<tr><input type="number" id="Example2"></tr>
+</div>
+</table>
+<br />
+<input type="submit" onclick="Compute(); return false;"/>
+</form>
+<label id="Answer">The Answer</label>
+<table id="mtxAns">
+</table>
+</body>
+</html>
