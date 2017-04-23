@@ -2,7 +2,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <head>
 <link rel="stylesheet" href="mainFina.css" type="text/css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script>
 var app = angular.module('finaApp',[]);
 </script>
@@ -83,11 +83,13 @@ var app = angular.module('finaApp',[]);
 	<th>Stock Name</th>
 	<th>Number of Shares</th>
 	<th>Stock Purchase Price</th>
+	<th>Total Purchase</th>
 </tr>
 <tr ng-repeat="stock in stocks">
 	<td>{{ stock.name }}</td>
 	<td>{{ stock.shares }}</td>
 	<td>{{ stock.price }}</td>
+	<td>{{ stock.total }}</td>
 	<td><button ng-click="sellStock(stock.name)" value="Sell">Sell</button></td>
 </tr>
 </table>

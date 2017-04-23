@@ -39,41 +39,41 @@ var taxRate = 0;
 		creditCardRate = document.getElementById("inputCreditRate").value/100;
 		food = document.getElementById("inputFood").value;
 	}
-	
-	
-	// this is where the controller for the stocks is 
+
+
+	// this is where the controller for the stocks is
 	//app = angular.module('finaApp',[]);
 	app.controller('stockCtrl',function($scope){
-		$scope.stocks = [{"name":"","shares":"","price":""}]; // this is the data structure that stores stock information
-		
+		$scope.stocks = [{"name":"","shares":"","price":"","total":""}]; // this is the data structure that stores stock information
+
 		// this adds a stock to data structure
 		$scope.addStock = function(){
-			$scope.stocks.push({name: $scope.name,shares: $scope.shares,price: $scope.price});
+			$scope.stocks.push({name: $scope.name,shares: $scope.shares,price: $scope.price,total: ($scope.shares * $scope.price)});
 		};
-		
-		// this sells and removes a stcok from the data structure
+
+		// this sells and removes a stock from the data structure
 		// its adds the sell value to the current passive income
 		$scope.sellStock = function(stockName){
 			//alert("In sellStock");
 			for(i=0;i<$scope.stocks.length;i++){
 				if($scope.stocks[i].name == stockName){
 					//alert("Found Stock");
-					passiveIncome += $scope.stocks[i].shares * $scope.stocks[i].price;
+					passiveIncome += $scope.stocks[i].total;
 					$scope.stocks[i].shares = 0;
-					$scope.stocks.splice(i,1) 
+					$scope.stocks.splice(i,1)
 					break;
 				}
 			}
 		};
 	});
-	// this is where the controller for the info 
+	// this is where the controller for the info
 	app.controller('infoCtrl',function($scope){
 		$scope.getJob = function(){return job;}
 		$scope.getSal = function(){return salary;}
 		$scope.getPasvInc = function(){return passiveIncome;}
 	});
-	
-	// this is where the controller for the expenses is 
+
+	// this is where the controller for the expenses is
 	app.controller('expenCtrl',function($scope){
 		$scope.getTaxPayment = function(){return salary * taxRate;}
 		$scope.getHomeMortPayment = function(){return homeMortgage*homeMortRate + ((homeMortgage/homeMortLength)/12);}
@@ -83,8 +83,8 @@ var taxRate = 0;
 		$scope.getFoodPayment = function(){return food;}
 		$scope.getOtherPayment = function(){return other;}
 	});
-	
-	// this is where the controller for the liab is 
+
+	// this is where the controller for the liab is
 	app.controller('liabCtrl',function($scope){
 		$scope.getHomeMort = function(){return homeMortgage;}
 		$scope.getCarLoan = function(){return carLoan;}
